@@ -14,6 +14,8 @@
 		5668C57829B56CDD00F6CD5B /* Setting_ControlCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668C57729B56CDD00F6CD5B /* Setting_ControlCenterTests.swift */; };
 		5668C58229B56CDD00F6CD5B /* Setting_ControlCenterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668C58129B56CDD00F6CD5B /* Setting_ControlCenterUITests.swift */; };
 		5668C58429B56CDD00F6CD5B /* Setting_ControlCenterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668C58329B56CDD00F6CD5B /* Setting_ControlCenterUITestsLaunchTests.swift */; };
+		5668C59429B576F800F6CD5B /* MyControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668C59329B576F800F6CD5B /* MyControl.swift */; };
+		5668C59629B5773600F6CD5B /* MyControlViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668C59529B5773600F6CD5B /* MyControlViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		5668C57D29B56CDD00F6CD5B /* Setting-ControlCenterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Setting-ControlCenterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5668C58129B56CDD00F6CD5B /* Setting_ControlCenterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting_ControlCenterUITests.swift; sourceTree = "<group>"; };
 		5668C58329B56CDD00F6CD5B /* Setting_ControlCenterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting_ControlCenterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5668C59329B576F800F6CD5B /* MyControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyControl.swift; sourceTree = "<group>"; };
+		5668C59529B5773600F6CD5B /* MyControlViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyControlViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +98,10 @@
 		5668C56529B56CDA00F6CD5B /* Setting-ControlCenter */ = {
 			isa = PBXGroup;
 			children = (
+				5668C59229B576DC00F6CD5B /* View */,
+				5668C59129B576BE00F6CD5B /* ViewModel */,
+				5668C59029B576B600F6CD5B /* Model */,
 				5668C56629B56CDA00F6CD5B /* Setting_ControlCenterApp.swift */,
-				5668C56829B56CDA00F6CD5B /* ContentView.swift */,
 				5668C56A29B56CDD00F6CD5B /* Assets.xcassets */,
 				5668C56C29B56CDD00F6CD5B /* Preview Content */,
 			);
@@ -125,6 +131,30 @@
 				5668C58329B56CDD00F6CD5B /* Setting_ControlCenterUITestsLaunchTests.swift */,
 			);
 			path = "Setting-ControlCenterUITests";
+			sourceTree = "<group>";
+		};
+		5668C59029B576B600F6CD5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5668C59329B576F800F6CD5B /* MyControl.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5668C59129B576BE00F6CD5B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5668C59529B5773600F6CD5B /* MyControlViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5668C59229B576DC00F6CD5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5668C56829B56CDA00F6CD5B /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5668C56929B56CDA00F6CD5B /* ContentView.swift in Sources */,
+				5668C59429B576F800F6CD5B /* MyControl.swift in Sources */,
+				5668C59629B5773600F6CD5B /* MyControlViewModel.swift in Sources */,
 				5668C56729B56CDA00F6CD5B /* Setting_ControlCenterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
