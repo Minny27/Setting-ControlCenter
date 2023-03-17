@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MyControl: Identifiable {
-    let isAdded: Bool
     let controlImageName: String
     let imageBackgoundColor: Color
     let title: String

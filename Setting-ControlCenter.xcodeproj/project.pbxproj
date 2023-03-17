@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5668C56729B56CDA00F6CD5B /* Setting_ControlCenterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668C56629B56CDA00F6CD5B /* Setting_ControlCenterApp.swift */; };
-		5668C56929B56CDA00F6CD5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668C56829B56CDA00F6CD5B /* ContentView.swift */; };
+		5668C56929B56CDA00F6CD5B /* ControlCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668C56829B56CDA00F6CD5B /* ControlCenterView.swift */; };
 		5668C56B29B56CDD00F6CD5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5668C56A29B56CDD00F6CD5B /* Assets.xcassets */; };
 		5668C56E29B56CDD00F6CD5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5668C56D29B56CDD00F6CD5B /* Preview Assets.xcassets */; };
 		5668C57829B56CDD00F6CD5B /* Setting_ControlCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5668C57729B56CDD00F6CD5B /* Setting_ControlCenterTests.swift */; };
@@ -38,7 +38,7 @@
 /* Begin PBXFileReference section */
 		5668C56329B56CDA00F6CD5B /* Setting-ControlCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Setting-ControlCenter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5668C56629B56CDA00F6CD5B /* Setting_ControlCenterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting_ControlCenterApp.swift; sourceTree = "<group>"; };
-		5668C56829B56CDA00F6CD5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5668C56829B56CDA00F6CD5B /* ControlCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterView.swift; sourceTree = "<group>"; };
 		5668C56A29B56CDD00F6CD5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5668C56D29B56CDD00F6CD5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5668C57329B56CDD00F6CD5B /* Setting-ControlCenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Setting-ControlCenterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,7 +152,7 @@
 		5668C59229B576DC00F6CD5B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5668C56829B56CDA00F6CD5B /* ContentView.swift */,
+				5668C56829B56CDA00F6CD5B /* ControlCenterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -287,7 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5668C56929B56CDA00F6CD5B /* ContentView.swift in Sources */,
+				5668C56929B56CDA00F6CD5B /* ControlCenterView.swift in Sources */,
 				5668C59429B576F800F6CD5B /* MyControl.swift in Sources */,
 				5668C59629B5773600F6CD5B /* MyControlViewModel.swift in Sources */,
 				5668C56729B56CDA00F6CD5B /* Setting_ControlCenterApp.swift in Sources */,

@@ -11,7 +11,7 @@ import SwiftUI
 struct Setting_ControlCenterApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ControlCenterView()
         }
     }
 }

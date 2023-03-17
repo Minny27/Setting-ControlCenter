@@ -7,46 +7,65 @@
 
 import SwiftUI
 
-final class MyControlViewModel {
-    var myControlList: [MyControl] = [
-        MyControl(isAdded: true,
-                  controlImageName: "flashlight.on.fill",
+final class MyControlViewModel: ObservableObject {
+    @Published var myControlList: [MyControl] = [
+        MyControl(controlImageName: "flashlight.on.fill",
                   imageBackgoundColor: .yellow,
                   title: "Flashlight"),
-        MyControl(isAdded: true,
-                  controlImageName: "timer",
+        MyControl(controlImageName: "timer",
                   imageBackgoundColor: .orange,
                   title: "Timer"),
-        MyControl(isAdded: true,
-                  controlImageName: "calendar",
+        MyControl(controlImageName: "calendar",
                   imageBackgoundColor: .orange,
                   title: "Calculator"),
-        MyControl(isAdded: true,
-                  controlImageName: "camera.fill",
+        MyControl(controlImageName: "camera.fill",
                   imageBackgoundColor: .gray,
                   title: "Camera"),
-        MyControl(isAdded: true,
-                  controlImageName: "record.circle",
+        MyControl(controlImageName: "record.circle",
                   imageBackgoundColor: .red,
                   title: "Record"),
-        MyControl(isAdded: true,
-                  controlImageName: "alarm.fill",
+        MyControl(controlImageName: "alarm.fill",
                   imageBackgoundColor: .orange,
                   title: "Alarm"),
     ]
     
-    var moreControlList: [MyControl] = [
-        MyControl(isAdded: false,
-                  controlImageName: "car.fill",
+    @Published var moreControlList: [MyControl] = [
+        MyControl(controlImageName: "car.fill",
                   imageBackgoundColor: .purple,
                   title: "Do not disturb"),
-        MyControl(isAdded: false,
-                  controlImageName: "appletv.fill",
+        MyControl(controlImageName: "appletv.fill",
                   imageBackgoundColor: .gray,
                   title: "Apple TV Remote"),
-        MyControl(isAdded: false,
-                  controlImageName: "person.fill",
+        MyControl(controlImageName: "person.fill",
                   imageBackgoundColor: .orange,
                   title: "Acceccibility Shortcuts")
     ]
+    
+    func removeItemOfMyControlList(at index: Int) {
+        withAnimation {
+            if !myControlList.isEmpty {
+                _ = myControlList.remove(at: index)
+            }
+        }
+    }
+    
+    func appendToMyControlList(item: MyControl) {
+        withAnimation {
+            myControlList.append(item)
+        }
+    }
+    
+    func removeItemOfMoreControlList(at index: Int) {
+        withAnimation {
+            if !moreControlList.isEmpty {
+                _ = moreControlList.remove(at: index)
+            }
+        }
+    }
+    
+    func insertFirstToMyControlList(item: MyControl) {
+        withAnimation {
+            moreControlList.insert(item, at: 0)
+        }
+    }
 }

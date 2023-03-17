@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ControlCenterView.swift
 //  Setting-ControlCenter
 //
 //  Created by SeungMin on 2023/03/06.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    let viewModel = MyControlViewModel()
+struct ControlCenterView: View {
+    @ObservedObject var viewModel = MyControlViewModel()
     
     @State var singleSelction: UUID?
     
@@ -21,11 +21,16 @@ struct ContentView: View {
                 ) {
                     (index, myControl) in
                     HStack(alignment: .center, spacing: 12) {
-                        Image(systemName: myControl.isAdded == true ? "minus" : "plus")
+                        Image(systemName: "minus")
                             .frame(width: 24, height: 24)
                             .foregroundColor(.white)
-                            .background(myControl.isAdded == true ? .red : .green)
+                            .background(.red)
                             .cornerRadius(30)
+                            .onTapGesture {
+                                let newItem = viewModel.myControlList[index]
+                                viewModel.removeItemOfMyControlList(at: index)
+                                viewModel.insertFirstToMyControlList(item: newItem)
+                            }
                         Image(systemName: myControl.controlImageName)
                             .frame(width: 34, height: 34)
                             .foregroundColor(.white)
@@ -52,11 +57,16 @@ struct ContentView: View {
                 ) {
                     (index, myControl) in
                     HStack(alignment: .center, spacing: 12) {
-                        Image(systemName: myControl.isAdded == true ? "minus" : "plus")
+                        Image(systemName: "plus")
                             .frame(width: 24, height: 24)
                             .foregroundColor(.white)
-                            .background(myControl.isAdded == true ? .red : .green)
+                            .background(.green)
                             .cornerRadius(30)
+                            .onTapGesture {
+                                let newItem = viewModel.moreControlList[index]
+                                viewModel.removeItemOfMoreControlList(at: index)
+                                viewModel.appendToMyControlList(item: newItem)
+                            }
                         Image(systemName: myControl.controlImageName)
                             .frame(width: 34, height: 34)
                             .foregroundColor(.white)
@@ -79,8 +89,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ControlCenterView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ControlCenterView()
     }
 }
